@@ -61,7 +61,7 @@ entity = config.get('cx', 'entity')
 kind = entity_type.EntityType.Kind.KIND_MAP # could probably just string "KIND_MAP but have not tested"
 response = authed_session.patch('https://dialogflow.googleapis.com/v3/projects/'+ project_id + '/locations/' + location + '/agents/' + agent_id + '/entityTypes/' + entity,
                     json={
-                            "displayName": "serviceTypeId", # todo: make this reflect name of .csv file
+                          #  "displayName": "serviceTypeId", # todo: make this reflect name of .csv file
                             "kind": kind,
                             "entities": json_blobs
                         }
